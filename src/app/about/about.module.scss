@@ -1,0 +1,24 @@
+.aboutWrap {
+    animation: fadeIn 200ms ease-in;
+    //border: 1px solid black;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+
+
+    .aboutBlock {
+        background: white;
+        padding: 32px 0;
+        border-radius: 10px;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

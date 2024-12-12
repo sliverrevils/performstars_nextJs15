@@ -1,0 +1,86 @@
+// import mongoose, { Schema, Document, Model } from "mongoose";
+
+// export interface IUser extends Document {
+//     _id: string;
+//     __v: number | undefined;
+//     _createdAt: string;
+//     _updatedAt: string;
+//     alias: string | undefined;
+//     avatar: string | undefined;
+//     avatar200: string | undefined;
+//     avatar400: string | undefined;
+//     balance: number | undefined;
+//     city: string | undefined;
+//     code: string | undefined;
+//     compareList: string[] | undefined;
+//     country: string | undefined;
+//     date: string | undefined;
+//     description: string | undefined;
+//     email: string | undefined;
+//     emailConfirmationToken: string | undefined;
+//     emailConfirmed: boolean;
+//     evaluate: boolean | undefined;
+//     event_time: string | undefined;
+//     id: string | undefined;
+//     image: string | undefined;
+//     image200: string | undefined;
+//     isNewsSubscription: boolean | undefined;
+//     loginTokens: string[];
+//     name: string;
+//     nationality: string | undefined;
+//     newPasswordConfirmationToken: string | undefined;
+//     newsSubscriptionToken: string | undefined;
+//     next_bill_date: string | undefined;
+//     nickname: string | undefined;
+//     password: string;
+//     role: string | undefined;
+//     socialLink: string | undefined;
+//     streamFps: string | undefined;
+//     streamSize: string | undefined;
+//     subscriptionPlan: string | undefined;
+//     tableSize: string | undefined;
+// }
+
+// const userSchema = new Schema<IUser>({
+//     //_id: { type: String, required: false },
+//     __v: { type: Number, required: false },
+//     //_createdAt: { type: String, required: false },
+//     //_updatedAt: { type: String, required: false },
+//     alias: { type: String, required: false },
+//     avatar: { type: String, required: false },
+//     avatar200: { type: String, required: false },
+//     avatar400: { type: String, required: false },
+//     balance: { type: Number, required: false },
+//     city: { type: String, required: false },
+//     code: { type: String, required: false },
+//     compareList: { type: [String], required: false },
+//     country: { type: String, required: false },
+//     date: { type: String, required: false },
+//     description: { type: String, required: false },
+//     email: { type: String, required: true },
+//     emailConfirmationToken: { type: String, required: false },
+//     emailConfirmed: { type: Boolean, required: false },
+//     evaluate: { type: Boolean, required: false },
+//     event_time: { type: String, required: false },
+//     id: { type: String, required: false },
+//     image: { type: String, required: false },
+//     image200: { type: String, required: false },
+//     isNewsSubscription: { type: Boolean, required: false },
+//     loginTokens: { type: [String], required: false },
+//     name: { type: String, required: true },
+//     nationality: { type: String, required: false },
+//     newPasswordConfirmationToken: { type: String, required: false },
+//     newsSubscriptionToken: { type: String, required: false },
+//     next_bill_date: { type: String, required: false },
+//     nickname: { type: String, required: false },
+//     password: { type: String, required: true },
+//     role: { type: String, required: false },
+//     socialLink: { type: String, required: false },
+//     streamFps: { type: String, required: false },
+//     streamSize: { type: String, required: false },
+//     subscriptionPlan: { type: String, required: false },
+//     tableSize: { type: String, required: false },
+// });
+
+// const User: Model<IUser> = mongoose.models.User || mongoose.model<IUser>("User", userSchema);
+// export default User;

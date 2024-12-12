@@ -1,0 +1,102 @@
+@use './variables.scss'as vars;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  height: 100%;
+
+}
+
+body {
+  border: 1px solid black;
+  min-height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+
+/* Прижимаем header и footer к краям */
+header {
+  height: 90px;
+  background: vars.$primary-color;
+  flex: 0 0 auto;
+
+
+}
+
+main {
+  animation: fadeIn 200ms ease-in;
+  min-height: 100%;
+  background: vars.$background-color;
+
+  flex: 1 0 auto;
+
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+footer {
+  flex: 0 0 auto;
+
+  background: vars.$footer-color;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 13px;
+  height: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border: 0;
+  outline: 0;
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: vars.$primary-color-opacity;
+  border-radius: 10px;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: vars.$primary-color;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

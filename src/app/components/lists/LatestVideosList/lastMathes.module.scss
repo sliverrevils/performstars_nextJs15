@@ -1,0 +1,96 @@
+@use '../../../styles/variables.scss'as vars;
+
+.lastMatchesWrap {
+    padding: 8px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(108, 117, 125);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18.662px;
+    border-radius: 8px;
+
+    .titleBlock {
+        padding: 20px 0;
+        justify-self: flex-start;
+        width: 100%;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .titleText {
+            font-size: 29px;
+            font-weight: 800;
+
+            span {
+                color: vars.$primary-color;
+            }
+        }
+    }
+}
+
+.matchItem {
+    border-radius: 5px;
+    box-shadow: 0 0 0 1px rgba(165, 165, 165, 0.527);
+
+    td {
+        padding: 15px;
+    }
+
+
+
+}
+
+.playerBlock {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.opponentsBlock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    .playerBlock:nth-child(1) {
+        width: 45%;
+
+        justify-content: flex-end;
+
+    }
+
+    .playerBlock:nth-child(3) {
+        width: 45%;
+
+
+    }
+
+    .vsBlock {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+
+        .scoreBlock {
+            display: flex;
+            gap: 3px;
+        }
+    }
+}
+
+.actionsBlock {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    .statsBtn {
+        padding: 3px 5px;
+        background: vars.$primary-color;
+        border-radius: 3px;
+    }
+}

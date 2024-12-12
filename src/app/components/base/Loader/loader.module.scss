@@ -1,0 +1,14 @@
+.loaderWrap {
+    z-index: 10;
+    background: rgba(128, 128, 128, 0.227);
+    position: fixed;
+    inset: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+
+    .loaderBlock {
+        // border: 2px solid white;
+    }
+}

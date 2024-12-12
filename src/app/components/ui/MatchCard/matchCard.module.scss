@@ -1,0 +1,46 @@
+.matchWrap {
+    //background: tomato;
+    width: 100%;
+
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    font-family: Nunito, Arial;
+    line-height: 1.333;
+    display: flex;
+    flex-direction: column;
+
+    .imageBlock {
+        width: 100%;
+        height: 300px;
+        background: linear-gradient(113.26deg, #7876F2 -7.36%, #FA5C7C 351.82%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .titleBlock {
+        display: flex;
+        justify-content: center;
+    }
+
+    .dateBlock {
+        display: flex;
+        justify-content: center;
+    }
+
+    .opponentsBlock {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 21px;
+
+        .score {
+            font-size: 65px;
+            font-weight: 700;
+            color: rgba(108, 117, 125, 1);
+        }
+    }
+
+}

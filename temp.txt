@@ -1,0 +1,12 @@
+➡️top 10 matches
+_updatedAt
+-score
+-event - champ->champs
+match ❌
+
+поле statistics - на матч - shots по id video
+
+
+
+
+

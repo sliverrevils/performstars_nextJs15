@@ -1,0 +1,229 @@
+@use '../../../styles/variables.scss'as vars;
+
+.headerMainWrap {
+    display: flex;
+    justify-content: center;
+}
+
+.headerBlock {
+    display: flex;
+    //border: 1px solid black;
+    height: 100%;
+    transition: all 500ms ease-in-out;
+
+    .userBlock {
+        display: none;
+    }
+
+
+    .logo {
+        // border: 1px solid black;
+        background: vars.$primary-color;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .burgerBtn {
+        display: none;
+    }
+
+    .navBlock {
+        width: 100%;
+        transition: all 500ms ease-in-out;
+
+        ul {
+            transition: transform 300ms ease-in-out;
+
+
+
+            //border: 1px solid black;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            gap: 30px;
+
+
+            .navItem {
+
+                // border: 1px solid black;
+                position: relative;
+                height: 100%;
+
+
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 600;
+
+                opacity: .7;
+                cursor: pointer;
+
+                display: flex;
+                align-items: center;
+                transition: all 200ms linear;
+
+                a {
+                    text-decoration: none;
+                    color: rgb(250, 251, 254);
+
+
+                }
+
+                &:hover {
+                    opacity: 1;
+
+                    &::after {
+
+                        content: '';
+                        position: absolute;
+                        bottom: 0px;
+                        left: 0px;
+                        right: 0px;
+                        height: 6px;
+                        background: rgb(255, 255, 255);
+                    }
+                }
+            }
+
+            .navItemCurrent {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media(max-width:600px) {
+
+
+    .headerMainWrap {
+
+        //border: 3px solid black;
+
+    }
+
+    .headerBlock {
+        padding: 20px;
+        justify-content: space-between;
+        align-items: center;
+
+        .userBlock {
+            display: block;
+        }
+
+        .logo {
+            justify-self: center;
+        }
+
+
+        .burgerBtn {
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            //border: 2px solid rgba(255, 255, 255, 0.555);
+            padding: 5px;
+            border-radius: 10px;
+
+            // background: vars.$primary-color;
+
+            // opacity: .9;
+
+            span {
+                filter: grayscale(300%) brightness(300%);
+            }
+        }
+
+        .navBlock {
+            //display: none;
+            z-index: -1;
+            position: fixed;
+            inset: 0px 0px 0px 0px;
+            background: rgba(0, 0, 0, 0.185);
+            backdrop-filter: blur(5px) grayscale(70%);
+            opacity: 0;
+
+
+
+
+
+            ul {
+                transform: translateX(-100%);
+
+                height: auto;
+                width: auto;
+                flex-direction: column;
+                padding: 50px 30px;
+                justify-content: flex-start;
+                z-index: 10;
+                background: vars.$primary-color;
+                position: fixed;
+                inset: 90px 30% 20% 0%;
+                border-radius: 2px 20px 20px 2px;
+                box-shadow: 13px 13px 6px rgba(0, 0, 0, 0.39);
+
+
+                .navItem {
+                    font-size: 25px;
+                    height: auto;
+                    align-self: flex-start;
+                }
+            }
+
+
+
+        }
+
+
+    }
+
+
+}
+
+.burgerOpen {
+
+
+    .userBlock {}
+
+
+    .logo {
+
+        z-index: 10;
+        background: transparent;
+
+        img {
+
+            // border: 1px solid black;
+
+        }
+    }
+
+    .burgerBtn {
+        // border-radius: 50%;
+        //box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.582);
+        //background: none;
+    }
+
+
+    .navBlock {
+        z-index: 9;
+        //background: tomato;
+        opacity: 1;
+        display: block;
+
+        ul {
+
+            transform: translateX(-5%);
+
+            .navItem {
+                //border: 1px solid black;
+
+            }
+        }
+    }
+
+
+}

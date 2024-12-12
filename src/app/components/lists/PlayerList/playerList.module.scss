@@ -1,0 +1,327 @@
+@use '../../../styles/variables.scss'as vars;
+
+.playerListWrap {
+    animation: fadeIn 200ms ease-in;
+    padding: 0 16px;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .filterBlock {
+        width: 100%;
+        padding: 15px 30px;
+        display: flex;
+        gap: 5px;
+        border: 2px solid rgb(196, 196, 196);
+        border-radius: 3px;
+        background: white;
+
+        .ico {
+            filter: grayscale(100%) brightness(180%) opacity(700%);
+        }
+
+        input {
+            border: 0;
+            outline: 0;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 21.28px;
+            color: gray;
+
+            &::selection {
+                // border: 0;
+                // outline: 0;
+            }
+
+            &::placeholder {
+                opacity: .4;
+                font-weight: 500;
+            }
+        }
+
+        &:hover {
+            box-shadow: 3px 3px 6px rgb(169, 169, 169);
+        }
+    }
+
+    .lettersBlock {
+        display: flex;
+        font-weight: 700;
+        color: rgb(108, 117, 125);
+        font-size: 22px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+
+        .letter {
+            cursor: pointer;
+            padding: 5px;
+            //border: 1px solid black;
+            border-radius: 50%;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            transition: all 200ms ease-in-out;
+
+            &:hover {
+                background: vars.$primary-color;
+                color: white;
+            }
+        }
+
+        .letterActive {
+            background: vars.$primary-color;
+            color: white;
+        }
+
+    }
+
+    .flagsBlock {
+
+        display: flex;
+        flex-wrap: wrap;
+
+        .flagWrap {
+            // border: 1px solid black;
+            padding: 10px 5px;
+            border-radius: 50%;
+            transition: all 200ms ease-in-out;
+
+            .flagItem {
+                width: 27px;
+                height: 17px;
+                overflow: hidden;
+                cursor: pointer;
+
+
+                // img {
+                //     width: 100%;
+                //     height: 100%;
+                // }
+
+
+            }
+
+            &:hover {
+                background: vars.$primary-color;
+                color: white;
+            }
+        }
+
+        .flagWrapActive {
+            background: vars.$primary-color;
+            color: white;
+        }
+    }
+
+    .playersListBlock {
+        display: flex;
+        flex-direction: column;
+
+        .headers {
+            display: flex;
+            justify-content: space-between;
+            background: vars.$primary-color;
+            //text-align: center;
+            font-size: 16px;
+            border-radius: 5px 5px 0 0;
+            color: white;
+
+
+            .headerName {
+                padding: 10px 15px;
+                width: 50%;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .headerShots {
+                padding: 10px 15px;
+                width: 25%;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .headerCountry {
+                padding: 10px 15px;
+                width: 25%;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+            }
+        }
+
+        .notFoundBlock {
+            //border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            padding: 16px;
+
+            .messageText {
+                font-size: 16px;
+                color: rgb(108, 117, 125);
+            }
+
+
+            .dropFilterBtn {
+                background: vars.$primary-color;
+                color: white;
+                padding: 8px 16px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+        }
+
+    }
+
+    .paginateBlock {
+        display: flex;
+        flex-direction: column;
+
+        .pagesBlock {
+            display: flex;
+        }
+    }
+
+    .loadingBlock {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+
+    .filterItem {
+        cursor: pointer;
+        filter: grayscale(100%) brightness(300%);
+        opacity: .5;
+    }
+
+    .filterItem_selected {
+        opacity: 1;
+    }
+}
+
+.playerWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    color: rgb(108, 117, 125);
+    font-weight: 600;
+    background: white;
+    transition: 300ms all ease-in-out;
+    padding: 5px 15px;
+
+    animation: fadeIn 200ms ease-in;
+
+
+
+    .playerBlock {
+        width: 50%;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        padding: 5px 15px;
+
+        .avaBlock {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            overflow: hidden;
+            outline: 2px solid vars.$primary-color;
+
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .nameStr {}
+
+
+    }
+
+    .shots {
+        width: 25%;
+        padding: 5px 15px;
+    }
+
+    .countryBlock {
+        width: 25%;
+        display: flex;
+        gap: 5px;
+        padding: 5px 15px;
+
+        .flagBlock {
+            width: 27px;
+            height: 17px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .countryStr {}
+    }
+
+    &:hover {
+        background: rgba(120, 118, 242, 0.17);
+
+    }
+
+
+}
+
+.onTopBtn {
+    position: fixed;
+    bottom: 50px;
+    left: 10px;
+    background: vars.$primary-color;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 3px 3px 5px black;
+
+    .ico {
+        font-size: 20px;
+        filter: grayscale(100%) brightness(300%);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

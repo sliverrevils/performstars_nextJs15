@@ -1,0 +1,98 @@
+@use '../../../styles/variables.scss'as vars;
+
+.infoWrap {
+    //border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 32px;
+    padding-right: 20px;
+
+
+
+
+    .infoTitle {
+        background: vars.$primary-color;
+        font-size: 32px;
+        color: white;
+        font-weight: 800;
+        padding: 0 32px;
+        border-radius: 2px 5px 0px 10px;
+        //transform: translateX(-10px);
+        margin-left: 10px;
+        box-shadow: 5px 5px 10px rgb(153, 153, 153);
+    }
+
+    .infoContent {
+        margin-left: 20px;
+        z-index: 1;
+        background: white;
+        box-shadow: 5px 5px 10px rgb(153, 153, 153);
+
+        max-width: 830px;
+        border: 2px solid vars.$background-color;
+        border-left: 0px;
+        border-radius: 0 20px 10px 20px;
+        padding: 16px 32px;
+        color: rgb(108, 117, 125);
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        a {
+            color: vars.$primary-color;
+            font-weight: 600;
+        }
+
+        img {
+            border-radius: 2px 10px 10px 10px;
+            box-shadow: 1px 1px 5px rgb(150, 150, 150);
+            //width: 100%;
+        }
+
+        video {
+            max-width: 500px;
+            //height: 500px;
+
+            border-radius: 0 10px 20px 10px;
+            border-radius: 2px 10px 10px 10px;
+            box-shadow: 1px 1px 5px rgb(150, 150, 150);
+            background: rgb(216, 216, 216);
+        }
+
+        div {
+            &::first-letter {
+                color: vars.$primary-color;
+                font-weight: 700;
+                margin-left: -5px;
+
+
+
+            }
+
+            &::before {
+
+
+                color: vars.$primary-color;
+                content: '☆';
+                margin-right: 10px;
+                font-size: 20px;
+                opacity: .8;
+
+            }
+        }
+
+        ul {
+            padding-left: 40px;
+
+            li {
+                &::marker {
+                    color: vars.$primary-color;
+                }
+            }
+
+        }
+    }
+}

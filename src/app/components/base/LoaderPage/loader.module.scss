@@ -1,0 +1,35 @@
+.loaderWrap {
+    animation: fadeIn 200ms ease-in;
+    z-index: 10;
+    // background: rgba(128, 128, 128, 0.227);
+    position: absolute;
+    inset: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // backdrop-filter: blur(10px);
+
+    .loaderBlock {
+        // border: 2px solid white;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

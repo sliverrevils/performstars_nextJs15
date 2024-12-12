@@ -1,0 +1,57 @@
+.matchWrap {
+    //border: 1px solid black;
+    background: white;
+    border-radius: 16px;
+    padding: 24px 22px;
+
+    .opponentsBlock {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 26px;
+
+        .scoresBlock {
+            font-size: 80px;
+            font-weight: 800;
+            color: #6C757D;
+        }
+    }
+
+    .eventBlock {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 21px;
+        gap: 24px;
+        align-items: center;
+        background: #E9E7FF;
+        border-radius: 16px;
+
+        // &>* {
+        //     border: 1px solid black;
+
+        // }
+
+        img {
+            color: black;
+            //background: black;
+        }
+
+        .titleBlock {
+            width: 100%;
+
+            .title {
+                color: #6C757D;
+                font-weight: 800;
+            }
+
+            .date {
+                color: #616A72;
+                font-size: 14px;
+            }
+        }
+
+        .coutryBlock {}
+
+
+    }
+}

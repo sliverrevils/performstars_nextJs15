@@ -1,0 +1,32 @@
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+.loaderBallWrap {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    opacity: .7;
+
+    .loaderText {
+        color: #7876f2;
+        font-size: 18px;
+        font-weight: 600;
+
+
+    }
+
+    .spinner {
+        animation: spin 2s linear infinite;
+    }
+}

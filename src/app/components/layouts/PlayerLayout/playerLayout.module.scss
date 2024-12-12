@@ -1,0 +1,94 @@
+.playerLayoutWrap {
+    padding: 0 16px 16px 16px;
+    display: flex;
+    flex-direction: column;
+
+    .playerContent {
+
+
+        // padding-top: 37px;
+        width: 100%;
+        //border: 1px solid red;
+
+        display: flex;
+        gap: 32px;
+
+        .playerInfoSide {
+            display: flex;
+            flex-direction: column;
+            max-width: 480px;
+
+            .infoChoose {
+
+                display: none;
+                gap: 20px;
+                padding: 4px 0px;
+                border-radius: 6px;
+                justify-content: center;
+                margin-bottom: 15px;
+
+
+                .chooseItem {
+                    width: 100%;
+                    font-family: Nunito;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 24px;
+                    text-align: center;
+
+                    background: white;
+                    border-radius: 6px;
+                    padding: 8px 20px;
+                    cursor: pointer;
+                    color: #6C757D;
+                }
+
+                .selected {
+                    background: var(--color-brand);
+                    color: white;
+                }
+            }
+
+            .playerGraphsBlock {}
+        }
+
+        .playerGamesSide {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .playerContent {
+            flex-direction: column;
+            gap: 10px;
+
+            .playerInfoSide {
+                max-width: 100%;
+
+                .infoChoose {
+                    display: flex;
+
+                    .chooseItem {}
+
+                }
+
+                .playerGraphsBlock {
+                    display: none;
+                }
+
+                .selectedBlock {
+                    display: block;
+                }
+
+            }
+
+            .playerGamesSide {
+                display: none;
+            }
+
+            .selectedBlock {
+                display: block;
+            }
+        }
+    }
+}

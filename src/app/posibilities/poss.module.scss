@@ -1,0 +1,23 @@
+.possibilitysWrap {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 200ms ease-in;
+
+
+    .possibilitysBlock {
+        background: white;
+        padding: 32px 0;
+        border-radius: 10px;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

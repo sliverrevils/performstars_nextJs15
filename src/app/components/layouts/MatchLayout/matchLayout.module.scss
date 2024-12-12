@@ -1,0 +1,26 @@
+.matchLayoutWrap {
+
+
+    width: 100%;
+    padding: 0 16px 16px 16px;
+
+    .matchContent {
+        border: 1px solid black;
+
+        width: 100%;
+        display: flex;
+        gap: 32px;
+
+        .matchInfoSide {
+            width: 100%;
+            max-width: 480px;
+            border: 1px solid black;
+        }
+
+        .matchRightSide {
+            width: 100%;
+            border: 1px solid black;
+        }
+
+    }
+}
